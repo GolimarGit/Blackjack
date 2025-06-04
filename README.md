@@ -22,7 +22,7 @@ This prevents losing your bet to the dealer (2 to 1: breaking even).
 Though, many experienced players do not recommended paying insurance.
 
 ### Surrendering
+Surrendering means that you give up half your bet.
 - Early surrender option only BEFORE the dealer checks their hole (second, face-down) card.
 - Late surrender option only AFTER the dealer checks hole card.
-> Note: some casinos do not offer late surrenderring
-Surrendering means that you give up half your bet.
+  > Note: some casinos do not offer late surrenderring
