@@ -1,3 +1,5 @@
+![luigi](https://github.com/user-attachments/assets/a652bd9e-3910-440c-8256-e72fca1dbf2e)
+
 # Blackjack
 Refreshing my memory of OOP with Java.
 This code will be used in StoryTime-Productions's [Minecraft server project](https://github.com/StoryTime-Productions/Stweaks).
