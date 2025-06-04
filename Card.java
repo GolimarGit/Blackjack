@@ -7,4 +7,12 @@ public class Card {
         ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN,
         KING
     }
+
+    public Rank rank;
+    public Suit suit;
+
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
+        this.suit = suit;
+    }
 }
