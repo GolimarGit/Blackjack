@@ -23,6 +23,9 @@ public class GameEngine {
         for (int i = 0; i < 2; i++) {
             player.hit(deck, player.handList.get(0));
         }
+
+        printDealerHand();
+        System.out.println("");
         player.printHand(0);
     }
 
@@ -32,5 +35,14 @@ public class GameEngine {
         while (keepPlaying) {
             // TODO: implement Scanner input if the Player has more than one hand
         }
+    }
+
+    public void printDealerHand() {
+        System.out.println("DEALER'S HAND {");
+        for (int i = 0; i < dealerHand.getCards().size(); i++) {
+            Card card = dealerHand.getCards().get(i);
+            System.out.println("    " + card.rank + " of " + card.suit + " (Value: " + card.cardValue + ")");
+        }
+        System.out.println('}');
     }
 }
