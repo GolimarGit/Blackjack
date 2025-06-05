@@ -3,12 +3,10 @@ import java.util.ArrayList;
 public class Player {
     ArrayList<Hand> handList;
     int balance;
-    Deck deck; // The deck is shared between all players and the dealer
 
-    public Player(Deck deck, int initialBalance) {
+    public Player(int initialBalance) {
         this.handList = new ArrayList<>();
         this.balance = initialBalance;
-        this.deck = deck;
     }
 
     public void makeHand() {
@@ -19,7 +17,7 @@ public class Player {
     // Draw a card from the deck to a hand
     // This updates the hand's value
     // returns the drawn card
-    public Card hit(Hand hand) {
+    public Card hit(Deck deck, Hand hand) {
         Card card = deck.drawCard();
         hand.addCard(card);
         return card;
@@ -43,5 +41,14 @@ public class Player {
 
     public void surrender() {
         
+    }
+
+    public void printHand(int handIndex) {
+        System.out.println("HAND " + handIndex + " {");
+        for (int i = 0; i < handList.get(handIndex).getCards().size(); i++) {
+            Card card = handList.get(handIndex).getCards().get(i);
+            System.out.println("    " + card.rank + " of " + card.suit + " (Value: " + card.cardValue + ")");
+        }
+        System.out.println('}');
     }
 }
