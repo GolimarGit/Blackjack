@@ -12,7 +12,7 @@ You must wait until the dealer reaches 17 (or over) or busts.
 
 ### Split
 When you receive 2 cards of the same number, you have the option of splitting.
-The second card becomes another *hand* with the same bet originally placed on it (so now you bet double)
+The second card becomes another *hand* with the same bet originally placed on it (so now you bet double).
 You can keep splitting as long as you get the same card, then you can play the round normally.
 > Note:	you cannot hit on an ace card
 
