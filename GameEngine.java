@@ -4,6 +4,7 @@ public class GameEngine {
     private Deck deck;
     private Hand dealerHand;
     private Player player;
+    private Scanner scanner;
 
     public void setup() {
         deck = new Deck();
@@ -14,12 +15,17 @@ public class GameEngine {
             dealerHand.addCard(deck.drawCard());
         }
 
-        Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         System.out.println("What is your initial (integer value) balance?");
         int initialBalance = scanner.nextInt();
         player = new Player(initialBalance);
         // Create the first hand for the player
+        System.out.println("How much will you bet (integer)?");
+        int bet = scanner.nextInt();
+        System.out.println();
+
         player.makeHand();
+        player.handList.get(0).setPlacedBet(bet);;
         for (int i = 0; i < 2; i++) {
             player.hit(deck, player.handList.get(0));
         }
@@ -27,14 +33,20 @@ public class GameEngine {
         printDealerHand();
         System.out.println("");
         player.printHand(0);
+
+        // TODO: implement insurance
+        // TODO: implement double down
+        // TODO: implement split
+        // TODO: implement surrender
     }
 
     public void mainGameLoop() {
         boolean keepPlaying = true;
 
         while (keepPlaying) {
-            // TODO: implement Scanner input if the Player has more than one hand
+            
         }
+        scanner.close();
     }
 
     public void printDealerHand() {
@@ -43,6 +55,7 @@ public class GameEngine {
             Card card = dealerHand.getCards().get(i);
             System.out.println("    " + card.rank + " of " + card.suit + " (Value: " + card.cardValue + ")");
         }
+        System.out.println("    Hand Value: " + dealerHand.getHandValue());
         System.out.println('}');
     }
 }

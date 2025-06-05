@@ -49,15 +49,22 @@ public class Hand {
         }
 
         handValue += card.cardValue;
+
+        // TODO: what if the hand's value is 21
+        // TODO: what if the hand's value exceeds 21
     }
 
     // TODO: implement value calculation after hit
-    private int getHandValue() {
+    public int getHandValue() {
         return handValue;
     }
 
     // TODO: implement adding higher value bet
-    private int getPlacedBet() {
+    public int getPlacedBet() {
         return placedBet;
+    }
+
+    public void setPlacedBet(int placedBet) {
+        this.placedBet = placedBet;
     }
 }

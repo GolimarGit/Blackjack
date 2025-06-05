@@ -49,6 +49,8 @@ public class Player {
             Card card = handList.get(handIndex).getCards().get(i);
             System.out.println("    " + card.rank + " of " + card.suit + " (Value: " + card.cardValue + ")");
         }
+        System.out.println("    Hand Value: " + handList.get(handIndex).getHandValue());
+        System.out.println("    Placed Bet: " + handList.get(handIndex).getPlacedBet());
         System.out.println('}');
     }
 }
