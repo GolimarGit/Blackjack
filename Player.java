@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Player {
-    ArrayList<Hand> handList;
-    int balance;
+    private ArrayList<Hand> handList;
+    private int balance;
 
     public Player(int initialBalance) {
         this.handList = new ArrayList<>();
@@ -41,6 +41,14 @@ public class Player {
 
     public void surrender() {
         
+    }
+
+    public ArrayList<Hand> getHandList() {
+        return handList;
+    }
+
+    public int getBalance() {
+        return balance;
     }
 
     public void printHand(int handIndex) {

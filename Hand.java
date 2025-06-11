@@ -49,9 +49,6 @@ public class Hand {
         }
 
         handValue += card.cardValue;
-
-        // TODO: what if the hand's value is 21
-        // TODO: what if the hand's value exceeds 21
     }
 
     // TODO: implement value calculation after hit
